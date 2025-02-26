@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Medication Requests - Hospital Help Desk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pharmacist-dashboard">
+    <div class="dashboard-container">
+        <h2>Process Medication Requests</h2>
+        <form id="medication-request-form" action="service_request.php" method="POST">
+            <div class="form-group">
+                <label for="patient-id">Patient ID</label>
+                <input type="text" id="patient-id" name="patient_id" required>
+            </div>
+            <div class="form-group">
+                <label for="medication-name">Medication Name</label>
+                <input type="text" id="medication-name" name="medication_name" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="urgency">Urgency</label>
+                <select id="urgency" name="urgency" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <button type="submit" name="submit_request">Submit Request</button>
+        </form>
+        <a href="pharmacist_dashboard.html">Back to Dashboard</a>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
